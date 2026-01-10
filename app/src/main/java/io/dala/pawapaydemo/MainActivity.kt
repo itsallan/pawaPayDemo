@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import io.dala.pawapaydemo.ui.theme.PawaPayDemoTheme
 import io.dala.pawapaykotlin.di.initKoin
+import io.dala.pawapaykotlin.domain.TransactionType
 import io.dala.pawapaykotlin.repository.PawaPayRepository
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
@@ -77,7 +78,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private suspend fun pollPayment(id: String, onResult: (String) -> Unit) {
-        repository.pollDepositStatus(id).fold(
+        repository.pollTransactionStatus(id, TransactionType.DEPOSIT).fold(
             onSuccess = { response ->
                 // response.data contains the final status objects
                 onResult("Payment Successful: ${response.data?.status}")

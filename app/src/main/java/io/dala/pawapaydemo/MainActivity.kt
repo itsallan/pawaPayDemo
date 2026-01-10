@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
         // 1. Initialize SDK (Do this once, usually in Application or MainActivity)
         initKoin(
             baseUrl = "https://api.sandbox.pawapay.io/v2/",
-            apiToken = "api key"
+            apiToken = "eyJraWQiOiIxIiwiYWxnIjoiRVMyNTYifQ.eyJ0dCI6IkFBVCIsInN1YiI6Ijc1OTkiLCJtYXYiOiIxIiwiZXhwIjoyMDgyMDE5NjUxLCJpYXQiOjE3NjY0ODY4NTEsInBtIjoiREFGLFBBRiIsImp0aSI6IjRhZGFkOGRmLWE4MWQtNDlmMy1iZjU0LTQ3MTZjNmVkNTkyMSJ9.ep7MY5Hvu7o08_Jhk5E9DikvloUdxuD-IsZyQqyPk40TfYwzPDJuCwUfsrlBN6wkpWEgKEmkS9sZsRuxHA0PNg"
         )
 
         setContent {

@@ -62,7 +62,7 @@ dependencies {
 
     //koin
     implementation(libs.koin.androidx.compose)
-    implementation("com.github.itsallan.PawapayKotlin:shared-android:1.0.0-alpha04")
+    implementation(libs.shared.android)
     api(libs.koin.core)
 
 }
